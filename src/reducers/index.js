@@ -26,7 +26,11 @@ const reducer = (state = initialState, action)=>{
                 loading:false,
                 error: action.payload
             }
-        
+        // case ADD_FRIEND:
+        //     return
+        //         name: action.payload,
+
+        //     }
         default:
             return state
     }
