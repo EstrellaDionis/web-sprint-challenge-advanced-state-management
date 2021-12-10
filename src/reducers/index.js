@@ -1,4 +1,4 @@
-import {LOADING, SUCCESS, ERROR} from '../actions/index'
+import {LOADING, SUCCESS, ERROR, ADD_SMURF} from '../actions/index'
 
 
 const initialState = {
@@ -26,11 +26,11 @@ const reducer = (state = initialState, action)=>{
                 loading:false,
                 error: action.payload
             }
-        // case ADD_FRIEND:
-        //     return
-        //         name: action.payload,
-
-        //     }
+        case ADD_SMURF:
+            return{
+                ...state,
+                smurfs: [...state.smurfs, action.payload]
+            }
         default:
             return state
     }

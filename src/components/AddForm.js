@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { setError } from '../actions/index'
+import { setError, addSmurf } from '../actions/index'
 
-const AddForm = ({ errorMessage, setError }) => {
+const AddForm = ({ errorMessage, setError, addSmurf }) => {
     const [state, setState] = useState({
         name:"",
         position:"",
@@ -25,7 +25,7 @@ const AddForm = ({ errorMessage, setError }) => {
         if (state.name === "" || state.position === "" || state.nickname === "") {
             setError()//dispatch a custom error action
         } else {
-            //dispatch an addSmurf action
+            addSmurf(state)//dispatch an addSmurf action
         }
     }
 
@@ -62,7 +62,7 @@ const mapToState = (state) => {
     };
   }
 
-export default connect(mapToState, { setError })(AddForm);
+export default connect(mapToState, { setError, addSmurf })(AddForm);
 
 //Task List:
 //1. Connect the errorMessage, setError and addSmurf actions to the AddForm component.

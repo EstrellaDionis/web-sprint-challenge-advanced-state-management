@@ -2,6 +2,7 @@ import axios from 'axios';
 export const LOADING = 'LOADING'
 export const SUCCESS = 'SUCCESS'
 export const ERROR = 'ERROR'
+export const ADD_SMURF = 'ADD_SMURF'
 
 export const fetchSmurfs = () => (dispatch) => {
     dispatch({type: LOADING})
@@ -15,6 +16,11 @@ export const fetchSmurfs = () => (dispatch) => {
 
 export const setError = () => (dispatch) =>  {
     dispatch({type: ERROR, payload: 'Name, Position & Nickname are required'})
+}
+
+export const addSmurf = (userData) => (dispatch) => {
+    console.log(userData)
+    dispatch({type: ADD_SMURF, payload: userData})
 }
 
 //Task List:
