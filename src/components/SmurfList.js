@@ -1,7 +1,6 @@
 import React from 'react';
 import Smurf from './Smurf';
 
-import thunk from 'redux-thunk';
 import { connect } from 'react-redux'
 import { fetchSmurfs } from '../actions';
 
@@ -11,9 +10,12 @@ import { fetchSmurfs } from '../actions';
         return <h1>Loading...</h1>;
     }
 
-    return(<div className="listContainer">
-        <Smurf smurf={props.smurfs}/>
-    </div>);
+
+    return(<div className='listContainer'>
+    {props.smurfs.map(smurf => {
+        return <Smurf smurf={smurf} key={smurf.id}/>
+    })}
+    </div>)
 }
 
 

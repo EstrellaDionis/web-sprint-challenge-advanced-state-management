@@ -18,7 +18,7 @@ const reducer = (state = initialState, action)=>{
             return{
                 ...state,
                 loading:false,
-                data: action.payload,
+                smurfs: action.payload,
             }
         case ERROR:
             return{

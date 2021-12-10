@@ -10,8 +10,8 @@ const { worker } = require('./mocks/browser');
 worker.start();
 const rootElement = document.getElementById("root");
 
-
 const store = createStore(reducer, applyMiddleware(thunk));
+
 
 ReactDOM.render(
     <Provider store={store}>
