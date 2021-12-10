@@ -15,9 +15,9 @@ You are not allowed to collaborate during the sprint challenge.
 In this challenge, you will build a Smurfs village database utilizing Redux as your state management system. Build this challenge from the ground up using what you have learned about state management.
 
 ## Project Setup
-* [ ] Run npm install to install your dependencies.
-* [ ] Run npm start to run your frontend and backend code automatically.
-* [ ] Note your backend code will run automatically when your run npm start. There is no need to separately run a server.js file and no means to test the server through postman or the browser. Feel free to ignore any messages related to MSW or mock service workers.
+* [x] Run npm install to install your dependencies.
+* [x] Run npm start to run your frontend and backend code automatically.
+* [x] Note your backend code will run automatically when your run npm start. There is no need to separately run a server.js file and no means to test the server through postman or the browser. Feel free to ignore any messages related to MSW or mock service workers.
 
 ## Project Instructions
 
@@ -112,9 +112,20 @@ In this project, you will build the reducer, actions and basic redux connects to
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers below.
 
 1. What problem does the context API help solve?
+It helps solve the problem of prop drilling, being easier to setup and being able to connect to multiple different parts of apps.
 
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
 
+actions- are very similar to if/else statements that return a specific action of your choosing depending on the action it was given. 
+
+reducers- take in state and action and return an updated state based on the arguments.
+
+store- the store contains the state in a application
+
+single source of truth - it's known as this because the only way to change the state is to dispatch redux action which changes state in the reducer.
+
 3. What does `redux-thunk` allow us to do? How does it change our `action-creators`?
+It allows us to take in data and determine whether to send it to a reducer or invoke it and pass in a dispatch if it's a function.
 
 4. What is your favorite state management system you've learned and this sprint? Please explain why!
+Context API because it's very easy to setup, can connect to any states and to multiple parts of an app.
