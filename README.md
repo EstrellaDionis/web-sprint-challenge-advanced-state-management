@@ -62,7 +62,7 @@ In this project, you will build the reducer, actions and basic redux connects to
   * [ ] Add in a reducer case that adds in a value to the error message.
 
 ### Complete index.js
-  Connect your application to reducer through redux with the thunk and logger middleware packages attached.
+  Connect your application to the reducer through redux with the thunk and logger middleware packages attached.
 
 ### Complete actions/index.js
   Add in the action creators and action constants needed to add a smurf to state and fetch smurfs from the server. **If at all possible, add in action cases one at a time, instead of all at once. Test your state connects and reducer cases as necessary.**
